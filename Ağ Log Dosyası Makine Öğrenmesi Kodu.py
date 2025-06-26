@@ -15,10 +15,6 @@ from lightgbm import LGBMClassifier
 
 # Veri setini okuyoruz ve sütun adlarındaki boşlukları kaldırıyoruz.
 veri = pd.read_csv(r"C:\Users\atkn_\Desktop\MachineLearningCVE\Birlestirilmisdosya.csv")
-veri.columns = [sutun.strip() for sutun in veri.columns]  # Bazı sütun adlarında boşluk olabilir (ör: ' Label')
-
-# Etiket sütunundaki boşluk karakterlerini kaldırıyoruz. (örneğin: 'DoS Hulk ' → 'DoS Hulk')
-veri['Label'] = veri['Label'].str.strip()
 
 # Sadece sayısal sütunları alıyoruz çünkü kullanacağımız modeller sadece sayısal verilerle çalışıyor.
 sayisal_sutunlar = veri.select_dtypes(include=[float, int]).columns
