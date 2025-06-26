@@ -14,7 +14,7 @@ from xgboost import XGBClassifier
 from lightgbm import LGBMClassifier
 
 # Veri setini okuyoruz ve sütun adlarındaki boşlukları kaldırıyoruz.
-veri = pd.read_csv(r"C:\Users\atkn_\Desktop\MachineLearningCVE\ALL_CICIDS2017_CLEAN.csv")
+veri = pd.read_csv(r"C:\Users\atkn_\Desktop\MachineLearningCVE\Birlestirilmisdosya.csv")
 veri.columns = [sutun.strip() for sutun in veri.columns]  # Bazı sütun adlarında boşluk olabilir (ör: ' Label')
 
 # Etiket sütunundaki boşluk karakterlerini kaldırıyoruz. (örneğin: 'DoS Hulk ' → 'DoS Hulk')
