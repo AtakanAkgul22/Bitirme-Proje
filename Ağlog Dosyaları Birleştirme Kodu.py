@@ -42,7 +42,7 @@ tum_veri.replace([np.inf, -np.inf], np.nan, inplace=True)
 tum_veri = tum_veri.dropna()
 
 # Temizlenmiş veri seti belirtilen konuma CSV olarak kaydedilir.
-cikis_dosyasi_yolu = os.path.join(klasor_yolu, "ALL_CICIDS2017_CLEAN.csv")
+cikis_dosyasi_yolu = os.path.join(klasor_yolu, "Birlestirilmisdosya.csv")
 tum_veri.to_csv(cikis_dosyasi_yolu, index=False)
 
 print(f"Birleştirilmiş ve temizlenmiş CSV başarıyla kaydedildi:\n{cikis_dosyasi_yolu}")
