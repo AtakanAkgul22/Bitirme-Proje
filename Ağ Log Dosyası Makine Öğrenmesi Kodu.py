@@ -13,7 +13,7 @@ from sklearn.svm import LinearSVC
 from xgboost import XGBClassifier
 from lightgbm import LGBMClassifier
 
-# Veri setini okuyoruz ve sütun adlarındaki boşlukları kaldırıyoruz.
+# Veri setini okuyoruz.
 veri = pd.read_csv(r"C:\Users\atkn_\Desktop\MachineLearningCVE\Birlestirilmisdosya.csv")
 
 # Sadece sayısal sütunları alıyoruz çünkü kullanacağımız modeller sadece sayısal verilerle çalışıyor.
