@@ -23,7 +23,7 @@ for dosya_adi in csv_dosyalari:
     
     print("-" * 40)
 
-# Tüm CSV dosyaları tek bir DataFrame'e birleştirilir (concat)
+# Tüm CSV dosyaları tek bir DataFrame'e birleştirilir.
 birlesmis_veriler = []
 for dosya_adi in csv_dosyalari:
     tam_yol = os.path.join(klasor_yolu, dosya_adi)
@@ -32,10 +32,6 @@ for dosya_adi in csv_dosyalari:
 
 # Satırları sıfırlayıp, tek bir DataFrame olarak birleştirir.
 tum_veri = pd.concat(birlesmis_veriler, ignore_index=True)
-
-# Sütun adlarının başında veya sonunda boşluk varsa temizlenir.
-# Bu, özellikle ' Label' gibi sütunları 'Label' haline getirir.
-tum_veri.columns = [sutun.strip() for sutun in tum_veri.columns]
 
 # Sonsuz (inf/-inf) değerleri NaN'e çevir ve tüm eksik değerleri kaldır
 tum_veri.replace([np.inf, -np.inf], np.nan, inplace=True)
